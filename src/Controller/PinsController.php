@@ -39,8 +39,7 @@ class PinsController extends AbstractController
      */
     public function  create( Request $request , EntityManagerInterface $em ): Response
     {
-
-          $pin = new Pin();
+        $pin = new Pin();
 
        $form = $this->createFormBuilder($pin)
         ->add('title' , null , [
@@ -55,10 +54,7 @@ class PinsController extends AbstractController
         {
                $em->persist($pin);
                $em->flush();
-
                return $this->redirectToRoute("app_pins_show" , ['id' => $pin->getId()]);
-
-
 
         }
 
