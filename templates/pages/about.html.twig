@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+ {% block title %}About Us | {{ parent() }} {% endblock %}
+
+{% block body %}
+    <img src="{{ asset('/images/canada.jpg') }}" alt="Quebec Flag" width="20%">
+    <h1> Built With &hearts; by LEs Teachers Du Net</h1>
+
+    <p><a href="{{ path('pages') }}">Revenir à la plage d'acceuil </a></p>
+{% endblock %}

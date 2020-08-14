@@ -1,10 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+     <img src=" {{ asset('/images/canada.jpg') }}" alt="Quebec Flag" width="20%">
      <h1>Hello From Quebec</h1>
 
      <p>It's currenty {{ 'now'|date('h:i A') }}</p>
-     <footer>
-          <p>&copy; Copyright {{ 'now'|date('Y') }} &middot; <a href="#">About us</a></p>
-     </footer>
+
 {% endblock %}
