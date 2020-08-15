@@ -3,17 +3,20 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Hello City!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
+            <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
+        {% endblock %}
     </head>
-    <body>
-    <main role="main">
+    <body class="flex flex-col justify-between items-center min-h-screen">
+    <main role="main" class="my-6">
         {% block body %}{% endblock %}
     </main>
 
-        <footer>
-            <p>
+        <footer class="my-6">
+            <p class="text-gray-400">
                 &copy; Copyright {{ 'now'|date('Y') }}
-                &middot; <a href="{{ path('about') }}">About us</a>
+                &middot; <a href="{{ path('about') }}" class="text-indigo-500 hover:text-indigo-600 underline">About us</a>
             </p>
         </footer>
         {% block javascripts %}{% endblock %}
